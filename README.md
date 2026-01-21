@@ -29,6 +29,23 @@ A multiplatform Hytale launcher with mod manager and more!
 ## Installation
 Downloads are available in releases
 
+
+## Build
+download this repo
+cd into it
+`cd frontend`
+`npm install && cd ..`
+`internal/game/Aurora/`
+for Linux
+make -C Aurora
+
+for Windows
+**not supported currently**
+
+cd into root dir of this project
+wails build
+
+
 ## Platform Support
 - Windows (fully supported)
 - macOS (ARM64)
