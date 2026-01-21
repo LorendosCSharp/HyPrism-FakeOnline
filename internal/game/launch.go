@@ -2,7 +2,6 @@ package game
 
 import (
 	"crypto/md5"
-	"embed"
 	"encoding/hex"
 	"errors"
 	"fmt"
@@ -15,9 +14,6 @@ import (
 	"HyPrism/internal/env"
 	"HyPrism/internal/util"
 )
-
-//go:embed Aurora/Build/Aurora.so
-var newEmbeddedFiles embed.FS
 
 // LaunchInstance launches a specific branch/version instance
 func LaunchInstance(playerName string, branch string, version int, fakeServer bool) error {
