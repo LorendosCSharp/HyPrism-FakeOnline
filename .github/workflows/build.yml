@@ -37,6 +37,32 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: '1.23'
+      - name: Build Aurora (macOS)
+        if: matrix.platform == 'macos'
+        shell: bash
+        run: |
+          set -e
+          cd internal/game/Aurora
+
+          mkdir -p Build
+
+          echo "Building Aurora.dylib..."
+
+          clang -dynamiclib -fPIC -O2 -o Build/Aurora.dylib *.c
+
+          echo "Built:"
+          ls -lh Build/Aurora.dylib
+
+      - name: Build Aurora (Windows)
+        if: matrix.platform == 'windows'
+        shell: cmd
+        run: |
+          @echo off
+          REM Optional: Windows 7 Go backport (skip if not needed)
+          win7go || echo Skipping win7go
+
+          REM Build aurora.dll
+          msbuild internal\game\Aurora\Aurora.slnx /p:Configuration=Release"
       
       - name: Setup Node
         uses: actions/setup-node@v4
