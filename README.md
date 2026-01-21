@@ -31,19 +31,17 @@ Downloads are available in releases
 
 
 ## Build
+for Linux
 - download this repo
 - cd into it
 - `cd frontend`
 - `npm install && cd ..`
-- `internal/game/Aurora/`
-for Linux
+- `cd internal/game/Aurora/`
 - make -C Aurora
-
-for Windows
-- **not supported currently**
-
 - cd into root dir of this project
 - `wails build`
+
+**windows is not supported**
 
 
 ## Platform Support
