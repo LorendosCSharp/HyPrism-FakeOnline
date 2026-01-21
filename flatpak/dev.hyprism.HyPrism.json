@@ -1,0 +1,51 @@
+{
+  "app-id": "dev.hyprism.HyPrism",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "46",
+  "sdk": "org.gnome.Sdk",
+  "command": "HyPrism",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=fallback-x11",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--device=dri",
+    "--filesystem=home",
+    "--filesystem=xdg-documents",
+    "--filesystem=xdg-download",
+    "--talk-name=org.freedesktop.Notifications",
+    "--talk-name=org.freedesktop.secrets",
+    "--env=XDG_CURRENT_DESKTOP=GNOME"
+  ],
+  "modules": [
+    {
+      "name": "HyPrism",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dm755 HyPrism /app/bin/HyPrism",
+        "install -Dm644 dev.hyprism.HyPrism.png /app/share/icons/hicolor/256x256/apps/dev.hyprism.HyPrism.png",
+        "install -Dm644 dev.hyprism.HyPrism.desktop /app/share/applications/dev.hyprism.HyPrism.desktop",
+        "install -Dm644 dev.hyprism.HyPrism.metainfo.xml /app/share/metainfo/dev.hyprism.HyPrism.metainfo.xml"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "HyPrism"
+        },
+        {
+          "type": "file",
+          "path": "dev.hyprism.HyPrism.png"
+        },
+        {
+          "type": "file",
+          "path": "dev.hyprism.HyPrism.desktop"
+        },
+        {
+          "type": "file",
+          "path": "dev.hyprism.HyPrism.metainfo.xml"
+        }
+      ]
+    }
+  ]
+}

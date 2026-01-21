@@ -1,0 +1,47 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Build
+build/bin/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if any)
+node_modules/
+
+# Frontend build
+frontend/dist/
+frontend/node_modules/
+
+# Go
+*.test
+*.out
+
+# Wails
+build/bin/
+wails.json.bak
+frontend/src/assets/background.mp4
+HyPrism
+
+# Flatpak build artifacts
+flatpak-repo/
+flatpak-build/
+.flatpak-builder/
+*.flatpak
